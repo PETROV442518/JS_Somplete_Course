@@ -19,7 +19,23 @@ function increasePopulationWithOne() {
 };
 
 
-/* functions usage*/
+// functions usage
 print();
 splitConutryPopulation();
 increasePopulationWithOne();
+
+//Coding Challenge #1
+let MarksWeight = 78;
+let MarksHeight = 1.69
+let JohnsWeight = 92;
+let JohnsHeight = 1.95
+
+function calculateBMI(height, mass) {
+    return BMI = mass / height ** 2
+}
+
+let markHigherBMI = false;
+if (calculateBMI(MarksHeight, MarksWeight) > calculateBMI(JohnsHeight, JohnsWeight)) {
+    markHigherBMI = true;
+}
+console.log(markHigherBMI)
