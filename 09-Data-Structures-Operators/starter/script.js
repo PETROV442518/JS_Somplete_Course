@@ -165,3 +165,19 @@ average, every ${90 / gameEvents.size} minutes`);
     console.log(`[SECOND HALF] ${e}: ${gameEvents.get(e)}`);
   }
 });
+
+//codding challenge 4
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value.split('\n');
+
+  for (let i = 0; i < text.length; i++) {
+    let [first, second] = text[i].split('_');
+    first = first.toLowerCase().trim();
+    second = second.toLowerCase().trim();
+    let finalWord = first + second.replace(second[0], second[0].toUpperCase());
+    console.log(`${finalWord.padEnd(20)}${'✅'.repeat(i + 1)}`);
+  }
+});
